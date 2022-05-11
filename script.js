@@ -5,6 +5,7 @@ const lowercaseEl = document.getElementById("lowercase");
 const numbersEl = document.getElementById("numbers");
 const symbolsEl = document.getElementById("symbols");
 const generateBtn = document.getElementById("generate");
+const clipboardEl = document.getElementById("clipboard");
 
 
 // 97 - 122 ( min is 97- max is 122): those are the ascii character
@@ -21,6 +22,18 @@ let randomFunc= { "lower": getRandomLower,
                    "number": getNumber,
                    "symbol": getRandomSymbol
                  }
+
+clipboardEl.addEventListener('click', () => {
+    const password = resultEl.innerText;
+    if(!password) {return};
+    const textArea = document.createElement('textarea');
+    textArea.value = password;
+    document.body.appendChild(textArea);
+    textArea.select()
+    document.execCommand('copy');
+    textArea.remove()
+    alert("Password copied to clipboard!");
+})
 
 generateBtn.addEventListener('click', ()=> {
     const length = +lengthEl.value;
@@ -45,4 +58,3 @@ function generatePassword (lower, upper, number, symbol, length){
     }
     return password.slice(0, length);
 }
-
