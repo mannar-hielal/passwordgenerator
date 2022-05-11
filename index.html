@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f62d86d79d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Password generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Password generator</h1>
+        <div class="result-container">
+            <span id="result">
+            </span>
+            <button class="btn" id="clipboard">
+                <i class="far fa-clipboard"></i>
+            </button>
+        </div>
+
+        <div class="settings-container">
+            <div class="setting">
+                <label> Password length </label>
+                <input type="number" id="length" min="4" max="10" value="20">
+            </div>
+
+            <div class="setting">
+                <label> Include uppercase letters </label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+
+            <div class="setting">
+                <label> Include lowercase letters </label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+
+            <div class="setting">
+                <label> Include numbers </label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+
+            <div class="setting">
+                <label> Include symbols </label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+        </div>
+
+        <button class="btn btn-large" id="generate">
+            Generate password
+        </button>
+    </div>
+
+    <footer>
+        <p> Developed by <a href="https://www.linkedin.com/in/mannar-hielal/">Mannar Hielal</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
