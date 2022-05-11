@@ -41,6 +41,10 @@ h1 {
     position: relative;
 }
 
+#result {
+    line-height: 1.75;
+}
+
 .btn {
     color: white;
     cursor: pointer;
